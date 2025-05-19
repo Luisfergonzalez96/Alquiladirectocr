@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alquileres Vacacionales en Costa Rica</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 🔝 Encabezado mejorado -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/1200px-Flag_of_Costa_Rica.svg.png" alt="Costa Rica" />
+        <h1>Alquila Directo <span>CR</span></h1>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#inicio">🏠 Inicio</a></li>
+          <li><a href="#propiedades">🏡 Propiedades</a></li>
+          <li><a href="#publicar">📤 Publicar</a></li>
+          <li><a href="#contacto">📞 Contacto</a></li>
+          <li><a href="#login" class="btn-login">Ingresar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <!-- 🏝️ Sección de bienvenida / Home -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Disfruta de Costa Rica sin intermediarios</h2>
+            <p>Alquila propiedades únicas directamente con los propietarios, sin comisiones.</p>
+            <a href="#propiedades" class="btn">Ver propiedades en Costa Rica</a>
+        </div>
+    </section>
+
+    <!-- 🏘️ Listado de propiedades destacadas -->
+    <section id="propiedades" class="propiedades">
+        <div class="container">
+            <h2>Propiedades destacadas en Costa Rica</h2>
+            <div class="prop-listado">
+                <div class="propiedad">
+                    <img src="img/prop1.jpg" alt="Casa en Guanacaste">
+                    <h3>Casa en Guanacaste</h3>
+                    <p>Desde ₡50,000 por noche</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+                <div class="propiedad">
+                    <img src="img/prop2.jpg" alt="Apartamento en San José">
+                    <h3>Apartamento en San José</h3>
+                    <p>Desde ₡30,000 por noche</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- 📤 Publicar propiedad -->
+<section id="publicar" class="centrado-seccion">
+  <div class="form-box">
+    <h2>Publica tu propiedad en Costa Rica</h2>
+    <form action="/procesar-publicacion" method="POST" enctype="multipart/form-data">
+      <input type="text" name="titulo" placeholder="Título de la propiedad" required>
+      <input type="text" name="ubicacion" placeholder="Ubicación (Ej. Guanacaste, Arenal)" required>
+      <input type="number" name="precio" placeholder="Precio por noche en colones" required>
+      <textarea name="descripcion" placeholder="Descripción de la propiedad" rows="4"></textarea>
+      <input type="file" name="imagen" accept="image/*">
+      <button type="submit">📤 Publicar propiedad</button>
+    </form>
+  </div>
+</section>
+
+<!-- 📩 Formulario de Contacto con WhatsApp -->
+<section id="contacto" class="centrado-seccion">
+  <div class="form-box">
+    <h2>Contáctanos</h2>
+    <form id="formContacto">
+      <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" id="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">📨 Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<!-- 🔐 Login -->
+<section id="login" class="centrado-seccion">
+  <div class="form-box">
+    <h2>Inicia sesión</h2>
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      <button type="submit">Ingresar</button>
+    </form>
+    <p>¿No tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
+  </div>
+</section>
+
+
+    <!-- 📌 Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alquileres Vacacionales Costa Rica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+<section class="hero">
+    <div class="container">
+        <h2>¡Vive la experiencia costarricense!</h2>
+        <p>Encuentra la mejor propiedad para disfrutar de tus vacaciones en Costa Rica.</p>
+        <a href="#propiedades" class="btn">Descubre nuestras propiedades</a>
+    </div>
+</section>
+<section class="beneficios">
+    <div class="centro-pantalla">
+        <h3>¡Disfruta de la cultura costarricense!</h3>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="testimonios" class="testimonios">
+    <div class="container">
+        <h3>Lo que dicen nuestros clientes</h3>
+        <div class="testimonial">
+            <p>"Gracias a esta plataforma, pude alquilar mi casa en Guanacaste sin tener que pagar comisiones altas. ¡Una excelente opción!"</p>
+            <span>- Laura, Propietaria en Guanacaste</span>
+        </div>
+        <div class="testimonial">
+            <p>"Nos hospedamos en una casa en las montañas y fue increíble. Definitivamente lo recomendamos a todos los ticos."</p>
+            <span>- Juan y María, turistas costarricenses</span>
+        </div>
+    </div>
+</section>
+<!-- 👨‍💻 Pie de página -->
+<footer class="footer">
+  <p>Desarrollado con 💻 por <strong>Luis González</strong> | Costa Rica 🇨🇷</p>
+</footer>
